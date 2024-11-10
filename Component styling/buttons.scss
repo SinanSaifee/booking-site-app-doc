@@ -1,0 +1,56 @@
+.circle-wave-btn {
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 50px;
+    padding: 10px 20px; 
+    background-color: #000;
+    color: #fff; 
+    position: relative;
+  }
+  .circle-wave-btn span{
+    z-index: 1;
+  }
+  .circle-wave-btn::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: blue;
+    border-radius: 50%;
+    top:-120%;
+    left: -60%;
+    transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  
+  }
+  .circle-wave-btn:hover span{
+    color: #000;
+    transition: all 0.5s;
+    
+  }
+  .circle-wave-btn:hover::before{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+
+  .black-pop-btn{
+    border-radius: 50px;
+    padding: 10px 20px; 
+    background-color: #000;
+    color: #fff; 
+    position: relative;
+    transition: 0.5s;
+  }
+  .black-pop-btn:hover{
+    transform: scale(1.1);
+  }
+  .black-pop-btn span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .black-pop-btn span i{
+    font-size: 20px;
+  }

@@ -1,0 +1,18 @@
+// styles.scss
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "navbar";
+@import "hero-section";
+@import "buttons";
+body {
+    background-color: #ffffff; /* A very light gray */
+    font-family: 'Poppins', sans-serif;
+  }
+a{
+    text-decoration: none;
+    color:#000;
+}
+button{
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000000000000000000000000000000000000000000000000000000000;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+}
+
+.nav-links ul li a:hover {
+  color: blue;
+}
+
+.sl-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.sl-container i {
+  font-size: 25px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.menu-backdrop {
+  display: none;
+}
+
+.close-menu {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .hamburger-menu {
+    display: block;
+    font-size: 30px;
+  }
+  .menu-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  .close-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    z-index: 999999;
+  }
+  .nav-links ul {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    flex-direction: column;
+    padding: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 40px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 99999;
+    align-items: flex-start;
+    transition: all 0.4s ease;
+  }
+  .nav-links ul li {
+    border-bottom: 1px solid #000;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  position: relative;
+  background-image: radial-gradient(#999 5%, transparent 0);
+  background-size: 35px 35px;
+}
+
+.hero-col {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.hero-row {
+  opacity: 0;
+  transform: translateY(20px); /* Start off 20px lower */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero-row.active {
+  opacity: 1;
+  transform: translateY(0); /* Move back to original position */
+}
+
+.hero-img {
+  width: 900px;
+  height: 100%;
+  border: 1px solid #000;
+}
+
+
+#event_layer{
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+#sun_layer{
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+#hotel_layer{
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+#human_layer{
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+#bus_layer{
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+
+.circle-wave-btn {
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 50px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+}
+
+.circle-wave-btn span {
+  z-index: 1;
+}
+
+.circle-wave-btn::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: blue;
+  border-radius: 50%;
+  top: -120%;
+  left: -60%;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
+}
+
+.circle-wave-btn:hover span {
+  color: #000;
+  transition: all 0.5s;
+}
+
+.circle-wave-btn:hover::before {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.black-pop-btn {
+  border-radius: 50px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  transition: 0.5s;
+}
+
+.black-pop-btn:hover {
+  transform: scale(1.1);
+}
+
+.black-pop-btn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.black-pop-btn span i {
+  font-size: 20px;
+}
+
+body {
+  background-color: #ffffff; /* A very light gray */
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
